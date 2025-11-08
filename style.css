@@ -1,0 +1,143 @@
+/*GERAL*/
+	
+body{font-family: 'Montserrat', sans-serif; margin: 0;font-size: 16px;}
+.flex-container{display:flex;}
+.space-between{justify-content: space-between;}
+.align-items{align-items: center;}
+*{box-sizing:border-box;}
+h1, h2, h3, h4, figure,p{margin:0;}
+a{text-decoration: none; color: inherit;}
+article img{width: 100%;}
+
+.container{width:100%; max-width:1200px;margin:0 auto;padding:0 2%;}
+
+
+/*MENU*/
+.menu{
+    position: fixed;
+    background-color: rgba(45,105,166,0.9);
+    width:100%;
+    padding: 20px;
+    text-align: center;
+    z-index:1;
+}
+
+.menu a{
+    color: #FFFFFF;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.mobile{
+    display: none;
+}
+
+
+/*HERO*/
+.hero{
+    background-image: url('../images/hero_low.jpg');
+    padding:150px 0;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 8px #000000;
+}
+
+
+
+h1{
+    font-size: 90px;
+}
+
+/*TIP-BOX*/
+.tip-box{
+    margin: 50px auto 20px auto;
+    flex-wrap:wrap;
+
+}
+
+.tip{
+    width: 49%;
+    background-color: rgba(45,105,166,0.4);
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 5px solid rgba(45,105,166,0.4);
+    transition: 0.3s;
+    position: relative;
+}
+
+.tip:hover{
+     background-color: rgba(45,105,166,0);
+}
+
+.tip img{
+    width: 100px;
+}
+
+.tip h3{
+    margin-top: 20px;
+    font-size: 16px;
+    
+}
+
+.step{
+    position: absolute;
+    top:0;
+    left:0;
+    font-size: 30px;
+    font-weight: 600;
+    background-color:#000000;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    /*opacity:0;
+    transition: 0.3s;*/
+}
+
+/*.tip:hover .step{
+    opacity:1;
+}*/
+
+footer{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/*Definição de media queries*/
+
+@media all and (max-width:768px){
+    h1{
+        font-size: 70px;
+    }
+}
+
+
+@media all and (max-width:480px){
+    .menu a{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .menu{
+        text-align: right;
+        padding: 5px 20px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .tip-box{
+        display: block;
+    }
+    .tip{
+        width: 100%;
+        pointer-events: none;
+    }
+}
